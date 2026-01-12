@@ -9,3 +9,8 @@ html {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #222;
 }
+
+body {
+  overscroll-behavior: none; /* empêche le rebond élastique du navigateur */
+  user-select: none; /* eviet de selectionner du texte par erreur en restant appuyé */
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">taskas</string>
+    <string name="title_activity_main">taskas</string>
+    <string name="package_name">com.example.task</string>
+    <string name="custom_url_scheme">com.example.task</string>
+</resources>

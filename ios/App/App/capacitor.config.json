@@ -1,0 +1,6 @@
+{
+	"appId": "com.example.task",
+	"appName": "taskas",
+	"webDir": "dist",
+	"packageClassList": []
+}

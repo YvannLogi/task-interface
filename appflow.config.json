@@ -1,3 +1,1 @@
-{
-  "node_version": "22"
-}
+{"apps":[{"appId":"e0bcefa4","root":".","dependency_install":"npm ci","node_version":"22"}]}

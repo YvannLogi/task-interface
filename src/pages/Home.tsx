@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import type { Task } from "../types/Task";
-import ApiService from "../services/api";
 import { TaskList } from "../components/TaskList";
 import { TaskForm } from "../components/TaskForm";
 import { Header } from "../components/Layout/Header";
@@ -14,6 +13,7 @@ import {
   Divider,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { createTask, getAllTasks } from "../services/task.service";
 
 export const Home = () => {
   const [opened, { toggle }] = useDisclosure();
@@ -22,7 +22,7 @@ export const Home = () => {
   useEffect(() => {
     const loadDatas = async () => {
       try {
-        const data = await ApiService.getAllTasks();
+        const data = await getAllTasks();
         setTasks(data.results);
       } catch (err) {
         console.error("erreur dans le chargement dans le travai ..", err);
@@ -33,7 +33,7 @@ export const Home = () => {
 
   const addTask = async (titre: string) => {
     try {
-      const newTask = await ApiService.createTask(titre);
+      const newTask = await createTask(titre);
       setTasks((prev) => [...prev, newTask]);
     } catch (error) {
       console.error("erreur de l ajout de la tache", error);
@@ -42,7 +42,7 @@ export const Home = () => {
 
   const deleteTask = async (id: number) => {
     try {
-      await ApiService.deleteTask(id);
+      await deleteTask(id);
       setTasks((prev) => prev.filter((t) => t.id !== id));
     } catch (error) {
       console.error("erreur pendant la suppression du travail ..", error);

@@ -1,0 +1,79 @@
+/** task form */
+.form {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+}
+
+.form > input {
+  border: 1px solid #c4bfbf;
+  padding: 12px;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.form > input:focus {
+  border: 1px solid #c4bfbf;
+  outline: none;
+  box-shadow: none;
+}
+
+.form > button {
+  border-radius: 10px;
+  width: 80px;
+  background-color: #333;
+  color: whitesmoke;
+  cursor: pointer;
+  padding: 8px 15px;
+}
+
+/** task list */
+.task-list-content {
+  border-top: 1px solid brown;
+  padding-top: 10px;
+}
+
+/** task item */
+.task-item-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 12px 16px;
+  margin-top: 12px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(45, 45, 45, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background-color: rgb(37, 93, 143);
+}
+
+.display-task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task_text {
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* supp une tache */
+.button-delete {
+  background-color: #e63946;
+  color: whitesmoke;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  padding: 6px 12px;
+}
+
+.button-delete:hover {
+  background-color: #c91826;
+}
+
+.button-delete:active {
+  transform: scale(0.95);
+}
